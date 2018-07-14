@@ -18,8 +18,7 @@ public Properties prop= new Properties();
 	{
 		File directory = new File("./");
 		try {
-		
-	FileInputStream FIS = new FileInputStream("C:\\Users\\Administrator\\.jenkins\\workspace\\git\\linkedin\\data.properties");
+				FileInputStream FIS = new FileInputStream("C:\\Users\\Administrator\\.jenkins\\workspace\\git\\linkedin\\src\\data.properties");
 				prop.load(FIS);
 			System.out.println("testbefore"+ directory.getAbsolutePath());
 			
