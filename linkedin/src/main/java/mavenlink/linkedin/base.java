@@ -19,11 +19,11 @@ public Properties prop= new Properties();
 		File directory = new File("./");
 		try {
 		
-/*		FileInputStream FIS = new FileInputStream("C:\\MAVENLINKED\\linkedin\\src\\data.properties");
-				prop.load(FIS);*/
-			System.out.println("testbefore");
+	FileInputStream FIS = new FileInputStream("C:\\Users\\Administrator\\.jenkins\\workspace\\git\\linkedin\\data.properties");
+				prop.load(FIS);
+			System.out.println("testbefore"+ directory.getAbsolutePath());
 			
-				prop.load(getClass().getResourceAsStream("../data.properties"));
+				//prop.load(getClass().getResourceAsStream(""../data.properties"));
 				System.out.println("test");
 		String browsername= prop.getProperty("browser");
 		String urlname = prop.getProperty("URL");
