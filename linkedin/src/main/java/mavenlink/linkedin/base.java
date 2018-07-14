@@ -17,8 +17,10 @@ public Properties prop= new Properties();
 	{
 		
 		
-		FileInputStream FIS = new FileInputStream("C:\\MAVENLINKED\\linkedin\\src\\data.properties");
-		prop.load(FIS);
+/*		FileInputStream FIS = new FileInputStream("C:\\MAVENLINKED\\linkedin\\src\\data.properties");
+				prop.load(FIS);*/
+			
+				prop.load(getClass().getResourceAsStream("data.properties"));
 		String browsername= prop.getProperty("browser");
 		String urlname = prop.getProperty("URL");
 		
