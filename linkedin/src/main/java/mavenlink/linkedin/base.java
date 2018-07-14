@@ -29,8 +29,9 @@ public Properties prop= new Properties();
 		
 		if (browsername.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\drawat2\\Downloads\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromedriver_win32\\chromedriver.exe");
+					
+			//	"C:\\Users\\drawat2\\Downloads\\chromedriver_win32\\chromedriver.exe");
 			 driver = new ChromeDriver();
 		}
 		else if (browsername.equals("firefox"))
