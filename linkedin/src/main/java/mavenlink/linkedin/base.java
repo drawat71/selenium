@@ -1,5 +1,6 @@
 package mavenlink.linkedin;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,10 +16,12 @@ public WebDriver driver;
 public Properties prop= new Properties();
 	public WebDriver initiliazedriver() throws Exception
 	{
+		File directory = new File("./");
 		try {
 		
 /*		FileInputStream FIS = new FileInputStream("C:\\MAVENLINKED\\linkedin\\src\\data.properties");
 				prop.load(FIS);*/
+			System.out.println("testbefore");
 			
 				prop.load(getClass().getResourceAsStream("../data.properties"));
 				System.out.println("test");
@@ -38,6 +41,8 @@ public Properties prop= new Properties();
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		} catch (Exception e) {
+			
+			   System.out.println(directory.getAbsolutePath());
 			throw e;
 		}
 		return driver;
