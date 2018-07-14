@@ -38,6 +38,7 @@ public class homepage extends base{
 	l.getemail().sendKeys(username);
 	l.password().sendKeys(password);
 	l.submit().click();
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	Assert.assertEquals(l.jobtitle().getText(),"Jobs");
 	l.jobtitle().click();
 	System.out.println("searchlink" + JP.searchjob());
