@@ -13,9 +13,9 @@ public class base {
 
 public WebDriver driver;	
 public Properties prop= new Properties();
-	public WebDriver initiliazedriver() throws IOException
+	public WebDriver initiliazedriver() throws Exception
 	{
-		
+		try {
 		
 /*		FileInputStream FIS = new FileInputStream("C:\\MAVENLINKED\\linkedin\\src\\data.properties");
 				prop.load(FIS);*/
@@ -37,6 +37,9 @@ public Properties prop= new Properties();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		} catch (Exception e) {
+			throw e;
+		}
 		return driver;
 }
 	

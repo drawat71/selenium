@@ -24,7 +24,7 @@ import Pageobjects.landingpage;
 public class homepage extends base{
 	@Test(dataProvider="getdata")
 	
-	public void basepagenavigation(String username ,String password) throws IOException, InterruptedException, AWTException
+	public void basepagenavigation(String username ,String password) throws IOException, InterruptedException, AWTException,Exception
 	
 	{
 		initiliazedriver();
