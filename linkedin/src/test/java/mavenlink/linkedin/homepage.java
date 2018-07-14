@@ -24,10 +24,12 @@ import Pageobjects.landingpage;
 public class homepage extends base{
 	@Test(dataProvider="getdata")
 	
-	public void basepagenavigation(String username ,String password) throws IOException, InterruptedException, AWTException,Exception
+	public void basepagenavigation(String username ,String password) 
 	
 	{
-		initiliazedriver();
+		try {
+			initiliazedriver();
+		
 		 //returning base driver
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("URL"));
@@ -58,7 +60,10 @@ public class homepage extends base{
 	Thread.sleep(1000);
 	((JavascriptExecutor) driver).executeScript("scroll(0,100)");
 	JP.developerlinkclick();
-
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@DataProvider
