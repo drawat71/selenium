@@ -21,6 +21,7 @@ public Properties prop= new Properties();
 				prop.load(FIS);*/
 			
 				prop.load(getClass().getResourceAsStream("data.properties"));
+				System.out.println("test");
 		String browsername= prop.getProperty("browser");
 		String urlname = prop.getProperty("URL");
 		
