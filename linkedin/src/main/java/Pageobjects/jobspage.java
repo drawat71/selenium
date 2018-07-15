@@ -116,7 +116,8 @@ public void developerlinkclick() throws InterruptedException, AWTException
 				WebElement newresume=driver.findElement(By.xpath("//input[@class='jobs-apply-form__resume-file-input']"));
 				newresume.click();
 				driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-				newresume.sendKeys("C:\\Users\\drawat2\\Downloads\\jayas\\Jayashree Resume.pdf");
+				//newresume.sendKeys("C:\\Users\\drawat2\\Downloads\\jayas\\Jayashree Resume.pdf");
+				newresume.sendKeys("C:\\Users\\Administrator\\Jayashree Resume.pdf");
 				driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 				// pressing keys with the help of keyPress and keyRelease events
 				Robot robot =new Robot();
